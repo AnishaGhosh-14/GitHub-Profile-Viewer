@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { fetchUserData } from "../api.js";
 import { useNavigate } from 'react-router-dom';
 import '../App.css'
+import NavbarUserProfile from "../components/NavbarUserProfile.jsx";
 
 function UserPage() {
   const { username } = useParams();
@@ -29,6 +30,8 @@ function UserPage() {
   }
 
   return (
+    <>
+    <NavbarUserProfile userData={userData}/>
     <div className="user-profile-container">
       <div className="profile-info-container">
         {error && <p>Error: {error}</p>}
@@ -38,6 +41,7 @@ function UserPage() {
             <div className="profile-info">
               <h1 style={{}}>User Profile</h1>
               <p>Username: {userData.login}</p>
+              <p>Location: {userData.location}</p>
               <p>Bio: {userData.bio || "Not available"}</p>
               <p>Public Repositories: {userData.public_repos}</p>
               <Button onClick={navigateToRepos} sx={{ bgcolor: 'green', color: 'white' ,'&:hover': {
@@ -49,6 +53,7 @@ function UserPage() {
         )}
       </div>
     </div>
+    </>
   );
 }
 
