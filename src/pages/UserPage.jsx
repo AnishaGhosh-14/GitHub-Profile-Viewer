@@ -40,13 +40,13 @@ function UserPage() {
             <img src={userData.avatar_url} alt={userData.login} className="profile-picture" />
             <div className="profile-info">
               <h1 style={{}}>User Profile</h1>
-              <p>Username: {userData.login}</p>
-              <p>Location: {userData.location}</p>
-              <p>Bio: {userData.bio || "Not available"}</p>
-              <p>Public Repositories: {userData.public_repos}</p>
+              <p><span style={{fontWeight:'bold',color:'green'}}>Username: </span>{userData.login}</p>
+              <p><span style={{fontWeight:'bold',color:'green'}}>Location: </span>{userData.location}</p>
+              <p><span style={{fontWeight:'bold',color:'green'}}>Bio:</span> {userData.bio || "Not available"}</p>
+              <p><span style={{fontWeight:'bold',color:'green'}}>Public Repositories:</span> {userData.public_repos}</p>
               <Button onClick={navigateToRepos} sx={{ bgcolor: 'green', color: 'white' ,'&:hover': {
       bgcolor: 'darkgreen' 
-    }}}>Show {userData.public_repos} Repositories</Button>
+    }}}>Show 30 Repositories</Button>
 
             </div>
           </>
