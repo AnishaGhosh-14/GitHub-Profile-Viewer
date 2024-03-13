@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
@@ -19,18 +18,30 @@ function CardRepos({ repos }) {
   
     return (
       <>
-        <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+       <Box sx={{ 
+  display: 'flex', 
+  flexDirection: 'column', 
+  justifyContent: 'center', 
+  gap: '1rem', 
+  background: 'rgba(255, 255, 255, 0.2)', /* Adjust the transparency as needed */
+  padding: '1rem', 
+  borderRadius: '10px', 
+  width: '70%', /* Adjust the width as needed */
+//   maxHeight: '70vh', /* Reduce the maximum height */
+  overflowY: 'auto' /* Add scrollbar if content overflows */
+}}>
   {repositoriesToShow.map(repo => (
-    <Card key={repo.id} variant="outlined" sx={{ width: 'calc(100% / 5)', boxShadow: '0 0 10px rgba(0, 255, 0, 0.5)', textAlign: 'center', padding: '1rem' }}>
+    <Card key={repo.id} variant="outlined" sx={{ padding: '1rem', border: '2px double rgba(255, 255, 255, 0.8)' }}>
       <React.Fragment>
-      <p><span style={{ fontWeight: 'bold' }}>Repo Name: </span>{repo.name}</p>
-<p><span style={{ fontWeight: 'bold' }}>Description: </span>{repo.description}</p>
-<p><span style={{ fontWeight: 'bold' }}>Created At: </span>{new Date(repo.created_at).toLocaleString()}</p>
+        <p style={{ margin: '0',fontWeight:'bold', color:'green' }}>{repo.name}</p>
+        <p style={{ margin: '0' }}>{repo.description}</p>
+        <p style={{ margin: '0' }}>Build at: {new Date(repo.created_at).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' })}</p>
 
       </React.Fragment>
     </Card>
   ))}
 </Box>
+
 
 <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 2 }}>
   <Pagination

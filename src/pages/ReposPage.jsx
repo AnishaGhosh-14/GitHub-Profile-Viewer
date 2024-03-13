@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Children } from 'react';
 import { useParams } from 'react-router-dom';
 import CardRepos from '../components/CardRepos';
-
+import '../App.css'
 const ReposPage = () => {
   const [repos, setRepos] = useState([]);
   const { username } = useParams();
@@ -25,12 +25,12 @@ const ReposPage = () => {
   }, [username]);
 
   return (
-    <div style={{ background: 'black', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'white',padding:'4rem'}}>
-      <h2 style={{marginBottom:'2%'}}>Repositories for <span style={{background:'green',color:'white',padding:'5px',borderRadius:'3px'}}>{username}</span></h2>
-      <CardRepos repos={repos}>
-        {Children}
-      </CardRepos>
-    </div>
+    <div className="page-container">
+    <h2 className="page-heading">Repositories for <span className="username-tag">{username}</span></h2>
+    <CardRepos repos={repos}>
+      {Children}
+    </CardRepos>
+  </div>
   );
 };
 
