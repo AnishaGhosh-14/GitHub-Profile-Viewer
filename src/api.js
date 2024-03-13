@@ -3,7 +3,6 @@ export async function fetchUserData(username) {
       const response = await fetch(`https://api.github.com/users/${username}`);
       if (response.ok) {
         const data = await response.json();
-        console.log(username);//try
         return data;
       } else {
         throw new Error('User not found');

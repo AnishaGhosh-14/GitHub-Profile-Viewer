@@ -1,20 +1,48 @@
-import React from 'react';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import React from "react";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 function NavbarUserProfile({ userData }) {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1 rem', 
-    backgroundColor: 'black', color: 'white',paddingRight:'2rem' }}>
-      <div style={{ display: 'flex', alignItems: 'center', paddingTop:'2rem',paddingLeft:'2rem' }}>
-        <GitHubIcon style={{ marginRight: '0.5rem' ,fontSize:'2rem'}} />
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        padding: "1 rem",
+        backgroundColor: "black",
+        color: "white",
+        paddingRight: "2rem",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          paddingTop: "2rem",
+          paddingLeft: "2rem",
+        }}
+      >
+        <GitHubIcon style={{ marginRight: "0.5rem", fontSize: "2rem" }} />
         <span>GitHub</span>
       </div>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
+      <div style={{ display: "flex", alignItems: "center" }}>
         {userData && (
           <>
-            <span style={{ marginRight: '0.5rem' }}>{userData.login}</span>
-            <div style={{ width: '30px', height: '30px', borderRadius: '50%', backgroundColor: 'white', overflow: 'hidden' }}>
-              <img src={userData.avatar_url} alt="Profile" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <span style={{ marginRight: "0.5rem" }}>{userData.login}</span>
+            <div
+              style={{
+                width: "30px",
+                height: "30px",
+                borderRadius: "50%",
+                backgroundColor: "white",
+                overflow: "hidden",
+              }}
+            >
+              <img
+                src={userData.avatar_url}
+                alt="Profile"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
             </div>
           </>
         )}
@@ -24,3 +52,4 @@ function NavbarUserProfile({ userData }) {
 }
 
 export default NavbarUserProfile;
+// Note: This component is intended for both the UserPage and ReposPage, as it displays the user profile name. It is designed for demonstration purposes, only showing the user's profile when logged in.
