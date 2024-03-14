@@ -25,6 +25,13 @@ Utilize Material-UI components for responsive and visually appealing design.
 * GitHub API: Utilize GitHub API to fetch user and repository data.
 * Pagination: Implemented pagination for the repository list.
 * Code Quality: Maintain clean, modular, and documented code.
+
+## Navbar Buttons Disclaimer:
+
+The login and signup buttons in the navbar are solely for UI demonstration purposes and do not have any backend functionality implemented. They are included to enhance the visual appearance of the application and simulate the login/signup process. Actual login and signup functionality will be implemented in future versions of the application.
+
+Including this disclaimer helps manage user expectations and provides clarity about the functionality of the UI elements.  
+
 ## Acknowledgement
 We acknowledge the use of Material-UI for UI components and the GitHub API for providing user and repository data.
 
