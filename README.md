@@ -1,70 +1,39 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React GitHub Profile Viewer
+## Overview
+This React application allows users to view GitHub user profiles and their repositories. It provides a user-friendly interface leveraging Material-UI components for a polished design.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Core Features
+#### 1. Profile Page:
 
-### `npm start`
+Dynamic user profile page displaying basic user information.
+Pass GitHub username via URL parameters.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### 2. Repository List:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Fetch and display a list of the user's GitHub repositories.
+Paginate repositories to show 10 per page.
+Each repository card includes a name, description, and creation date.
 
-### `npm test`
+#### 3. Responsive UI:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Utilize Material-UI components for responsive and visually appealing design.
+## Technical Details
+* React: Built using React for frontend development.
+* Material-UI: Integrated Material-UI for consistent UI components.
+* GitHub API: Utilize GitHub API to fetch user and repository data.
+* Pagination: Implemented pagination for the repository list.
+* Code Quality: Maintain clean, modular, and documented code.
+## Acknowledgement
+We acknowledge the use of Material-UI for UI components and the GitHub API for providing user and repository data.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This site was built using [GitHub Pages](https://github.com/AnishaGhosh-14/GitHub-Profile-Viewer) and can accessed here [here](https://git-hub-profile-viewer-eta.vercel.app/)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contribution
+Contributions are welcome! Feel free to submit pull requests or open issues for any improvements or bug fixes.
